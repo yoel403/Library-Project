@@ -1,0 +1,96 @@
+body{
+    overflow: hidden !important;
+}
+
+.leftside, .rightside{
+    height: 100vh;
+    width: 100%;
+}
+
+@media screen and (max-width:768px){
+    .leftside{
+        display: none;
+    }
+}
+
+.leftside{
+    background-image: url(https://cdn.idntimes.com/content-images/community/2020/06/chair-beside-book-shelves-2041540-9877dcc33f6651defa63f4389ec54852_600x400.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: white;
+    padding: 50px 0 0 35px;
+    font-weight: 300;
+}
+
+h2{
+    font-weight: 300;
+    font-family: 'Airbnb Cereal App';
+    font-size: 64px;
+    line-height: 83px;
+    color: #424242;
+}
+
+img{
+    float: right;
+    width: 10%;
+    height: auto;
+    padding: 10px 10px 0 0 ;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    padding-top: 10%;
+}
+
+form{
+    box-shadow: 30px !important;
+    width: 80% !important;
+}
+
+a{
+    text-decoration: none !important;
+    color: black !important;
+    font-weight: 500;
+}
+
+.button{
+    padding-top: 50px;
+    line-height: 20px;
+}
+
+button{
+    text-decoration: none !important;
+    background: #000000;
+    border-radius: 5px !important;
+    font-size: 17px;
+    line-height: 22px;
+    font-family: 'Airbnb Cereal App';
+}
+
+.login{
+    color: white !important;
+    border-radius: 5px;
+}
+
+.signup{
+    background: #FFFFFF;
+    border: 1px solid #D0CCCC;
+    border-radius: 5px;
+    line-height: 17px;
+    color:#D0CCCC !important;
+}
+
+.grey{
+    color:#D0CCCC !important;
+}
+
+.copyright{
+    font-family: 'Airbnb Cereal App';
+    font-size: 17px;
+    line-height: 22px;
+}
+

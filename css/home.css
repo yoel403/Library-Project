@@ -1,0 +1,363 @@
+*{
+    padding: 0 ;
+    margin: 0 ;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; 
+}
+  
+.wrapper{
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.sidebar{
+    width: 260px;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    transition: all ease-in 0.2s;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar.hide{
+    width: 0;
+    transition: all ease-out 0.2s;
+    left: -100%;
+}
+
+.sidebar .header .profile button{
+    border: none !important;
+    background: none !important;
+}
+
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.sidebar .header .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.sidebar .list-item button{
+    list-style-type: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    background: none !important;
+}
+
+.sidebar .header .list-item .icon{
+    margin-right: 12px;
+}
+
+.sidebar .header .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0 22px 0;
+    box-sizing: border-box;
+}
+
+h3{
+    padding: 15px;
+}
+
+.profile a{
+    line-height: normal;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar.hide .profile{
+    display: none;
+}
+
+.sidebar .main .list-item .description{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.sidebar.hide .main .list-item .description{
+    display: none;
+}
+
+.sidebar .main .list-item .icon{
+    margin-right: 12px;
+}
+
+.sidebar .main .list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    color: black;
+    border-radius: 8px;
+    width: 212px;
+    box-sizing: border-box;
+}
+
+/*toogle menu*/
+
+#menu-button {
+    width: 32px;
+    position: absolute;
+    overflow: hidden;
+    margin: 20px 0 0 10px;
+    float: right;
+}
+
+#menu-label {
+    position: relative;
+    display: block;
+    height: 20px;
+    cursor: pointer;
+}
+
+#menu-checkbox{
+    display: none;
+}
+
+#hamburger, #menu-label:after, #menu-label:before{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+#menu-label::after, #menu-label::before{
+    content: "";
+}
+
+#menu-label::before{
+    top: 0%;
+}
+
+#menu-label:after{
+    top: 8px;
+}
+
+#hamburger{
+    top: 16px;
+}
+
+#hamburger::before{
+    content: "MENU";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    left: 0;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#menu-checkbox:checked + #menu-label::before {
+    right: 39px;
+}
+
+#menu-checkbox:checked + #menu-label::after{
+    left:  39px;
+}
+
+#menu-checkbox:checked + #menu-label #hamburger::before{
+    animation: moveUpThenDown 0.8s ease 0.2s forwards,
+    shakeUp 0.8s ease 0.2s forwards,
+    shakeDown 0.2s ease 0.8s forwards;
+}
+
+@keyframes moveUpThenDown {
+    0%{
+        top: 0;
+    }
+    50%{
+        top: -27px;
+    }
+    100%{
+        top: -14px;
+    }
+    
+}
+
+@keyframes shakeUp {
+    0% {
+        transform: rotateZ(0);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    50% {
+        transform: rotateZ(0);
+    }
+    75% {
+        transform: rotateZ(10deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+@keyframes shakeDown {
+    0% {
+        transform: rotateZ(0);
+    }    
+    80% {
+        transform: rotateZ(3deg);
+    }
+    90% {
+        transform: rotateZ(-3deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+/*modal*/
+.modal-content{
+    width: 600px !important;
+    height: 400px !important;
+}
+
+.Url{
+    width: 120px !important;
+    font-weight: 500;
+}
+
+.input{
+    margin-left: 65px;
+}
+
+.modal-footer button{
+    border: none !important;
+    color: white !important;
+    border-radius: 15px;
+    line-height: 35px;
+    width: 100px;
+}
+
+/*Navbar section*/
+nav{
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    left: 0%;
+}
+
+.container-fluid{
+    padding: 0 !important;
+    overflow: hidden !important; 
+}
+
+.search{
+    margin-right: 20%;
+}
+
+.search img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.logo{
+    font-family: 'Airbnb Cereal App';
+    font-size: 30px;
+    line-height: 39px;
+    color: #424242;
+    margin: 0 !important;
+}
+
+.logo-img{
+    margin: 0 !important;
+    width: 35px;
+    height: 35px;
+}
+
+
+/*Carousel*/
+
+.carousel{
+    height: 200px;
+}
+
+.gallery-cell {
+    width: 35%;
+    height: 150px;
+    margin-right: 10px;
+    background-image: url(/assets/dilan.png);
+    counter-increment: gallery-cell;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    border-radius: 20px;
+}
+
+.is-selected{
+    height: 200px;
+    transition: 0.2s;
+}
+
+.slide-2{
+    background-image: url(/assets/uburubur.png);
+}
+
+.slide-3{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSjim11BROBZBueGIHdpy5U92WBr-IKMS-6g&usqp=CAU);
+}
+  
+img{
+    size: 50% !important;
+}
+
+.carousel-caption{
+   width: auto;
+    background: rgba(0, 0, 0, 0.2) 20%;
+    border-radius: 0px 0px 15px 15px;
+    position: -webkit-sticky;
+}
+
+.carousel-caption a{
+    color: #FFFFFF !important;
+    font-weight: 300 !important;
+}
+
+
+/*List Book*/
+.container .list-book{
+    overflow: hidden;
+}
+
+
+.card{
+    overflow: hidden ;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    position: absolute;
+}
+
+.book1 img{
+    height: 164px !important;
+}
+
+.flickity-page-dot{
+    display: none !important;
+}
