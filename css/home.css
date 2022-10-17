@@ -7,6 +7,7 @@
 
 body {
     font-family: sans-serif; 
+    width: 100% !important;
 }
   
 .wrapper{
@@ -278,7 +279,6 @@ nav{
 }
 
 .logo{
-    font-family: 'Airbnb Cereal App';
     font-size: 30px;
     line-height: 39px;
     color: #424242;
@@ -328,7 +328,7 @@ img{
 }
 
 .carousel-caption{
-   width: auto;
+    width: auto;
     background: rgba(0, 0, 0, 0.2) 20%;
     border-radius: 0px 0px 15px 15px;
     position: -webkit-sticky;
@@ -344,7 +344,6 @@ img{
 .container .list-book{
     overflow: hidden;
 }
-
 
 .card{
     overflow: hidden ;
