@@ -6,7 +6,7 @@
 }
 
 .container-fluid .Up{
-    background-image: url(/assets/detail.png);
+    background-image: url(../assets/detail.png);
     height: 250px !important;
     margin: 0 0 -150px 0 !important;
 }
