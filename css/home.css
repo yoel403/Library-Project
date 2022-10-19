@@ -261,23 +261,15 @@ nav{
     background: #FFFFFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     left: 0%;
-    z-index: 1;
-}
-
-nav ul{
-    z-index: 1;
-}
-
-nav ul li{
-    z-index: 1;
+    z-index:  0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
 }
 
 .dropdown-menu{
-    z-index: 0;
-}
-
-.dropdown-menu .dropdown-item{
-    z-index: 1;
+    z-index:0;
+    position: fixed;
 }
 
 .container-fluid{
